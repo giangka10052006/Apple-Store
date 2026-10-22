@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>iHub - Cửa Hàng iPhone Chính Hãng</title>
+
+		<!-- Nhúng Font chữ SF Pro Display / Montserrat cho hiện đại -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+		/>
+
+		<!-- Nhúng thư viện Icon Lucide -->
+		<script src="https://unpkg.com/lucide@latest"></script>
+
+		<!-- Nhúng file CSS riêng -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<!-- Top Header -->
+		<div class="top-header">
+			<div class="container">
+				<div class="inner-wrap">
+					<div class="inner-item">
+						<i class="fa-solid fa-phone"></i> 0123.456.789
+					</div>
+					<div class="inner-item">
+						<i class="fa-solid fa-envelope"></i> contact@28travel.com
+					</div>
+					<div class="inner-item">
+						<i class="fa-solid fa-building"></i> Số 123, đường ABC, thành phố
+						XYZ
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Top Header -->
+
+		<!-- HEADER -->
+		<header class="header">
+			<div class="container header-container">
+				<!-- Logo thương hiệu -->
+				<a href="#" class="logo">
+					<div class="logo-icon">
+						<i data-lucide="smartphone"></i>
+					</div>
+					<div class="logo-text">
+						<span class="brand-name">iHub</span>
+						<span class="brand-sub">Apple Authorised</span>
+					</div>
+				</a>
+
+				<!-- Menu liên kết chính -->
+				<nav class="nav-menu">
+					<ul>
+						<li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+						<li><a href="#products" class="nav-link">iPhone 18 Series</a></li>
+						<li><a href="#products" class="nav-link">Tất cả sản phẩm</a></li>
+						<li><a href="#promotions" class="nav-link">Ưu đãi</a></li>
+						<li><a href="#footer" class="nav-link">Liên hệ</a></li>
+					</ul>
+				</nav>
+
+				<!-- Thanh tìm kiếm & Giỏ hàng -->
+				<div class="header-actions">
+					<div class="search-box">
+						<i data-lucide="search" class="search-icon"></i>
+						<input type="text" placeholder="Tìm iPhone..." />
+					</div>
+
+					<a
+						href="gio-hang.html"
+						class="cart-btn"
+						id="cartBtn"
+						title="Giỏ hàng"
+						style="
+							text-decoration: none;
+							display: inline-flex;
+							align-items: center;
+						"
+					>
+						<i data-lucide="shopping-bag"></i>
+						<span class="cart-badge" id="cartCount">2</span>
+					</a>
+				</div>
+			</div>
+		</header>
+		<!--END HEADER -->
+
+		<!-- BANNER CHÍNH -->
+		<section id="hero" class="hero-section">
+			<div class="container hero-container">
+				<!-- Nội dung giới thiệu sản phẩm HOT -->
+				<div class="hero-content">
+					<span class="badge-new">
+						<i data-lucide="sparkles"></i> Mới Ra Mắt
+					</span>
+
+					<h1 class="hero-title">
+						iPhone 18 Pro <br />
+						<span class="gradient-text">Titan Mới. Đỉnh Cao Mới.</span>
+					</h1>
+
+					<p class="hero-desc">
+						Khám phá thiết kế Titan sa mạc đẳng cấp, chip A20 Pro siêu mạnh mẽ
+						và hệ thống camera chuẩn điện ảnh.
+					</p>
+
+					<div class="hero-buttons">
+						<a href="#products" class="btn btn-primary">
+							Mua Ngay <i data-lucide="arrow-right"></i>
+						</a>
+						<a href="#products" class="btn btn-outline">Tìm Hiểu Thêm</a>
+					</div>
+
+					<!-- 3 Tiêu chí cam kết -->
+					<div class="hero-features">
+						<div class="feature-item">
+							<i data-lucide="shield-check"></i>
+							<span>Bảo hành 12 tháng VN/A</span>
+						</div>
+						<div class="feature-item">
+							<i data-lucide="truck"></i>
+							<span>Giao hàng miễn phí</span>
+						</div>
+						<div class="feature-item">
+							<i data-lucide="refresh-cw"></i>
+							<span>Thu cũ đổi mới trợ giá 2tr</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Hình ảnh iPhone chính -->
+				<div class="hero-image-wrapper">
+					<div class="glow-bg"></div>
+					<img
+						src="assets/images/apple-iphone-18-pro.png"
+						alt="iPhone 18 Pro"
+						class="hero-img"
+					/>
+				</div>
+			</div>
+		</section>
+		<!--END BANNER -->
+
+		<!-- Section 3 : Danh sach san pham -->
+		<section id="products" class="products-section container">
+			<!-- Tiêu đề & Bộ lọc -->
+			<div class="section-header">
+				<div>
+					<h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+					<p class="section-subtitle">
+						Chọn dòng iPhone phù hợp nhất với nhu cầu của bạn
+					</p>
+				</div>
+
+				<!-- Các nút lọc danh mục -->
+				<div class="filter-tabs">
+					<button class="tab-btn active" data-filter="all">Tất Cả</button>
+					<button class="tab-btn" data-filter="iphone18">
+						iPhone 18 Series
+					</button>
+					<button class="tab-btn" data-filter="iphone17">
+						iPhone 17 Series
+					</button>
+				</div>
+			</div>
+
+			<!-- Lưới hiển thị các Card sản phẩm -->
+			<div class="product-grid">
+				<!-- Card 1-->
+				<div class="product-card" data-category="iphone18">
+					<div class="card-img-box">
+						<span class="tag tag-sale">-10%</span>
+						<img src="assets/images/iphone18proo.jpg" alt="iPhone 18 Pro Max" />
+					</div>
+					<div class="card-body">
+						<div class="color-dots">
+							<span class="dot gold"></span>
+							<span class="dot silver"></span>
+							<span class="dot black"></span>
+						</div>
+						<h3 class="product-name">iPhone 18 Pro Max</h3>
+						<p class="product-spec">
+							Màn hình 6.9" Super Retina XDR, Chip A20 Pro
+						</p>
+						<div class="price-box">
+							<span class="current-price">34.990.000đ</span>
+							<span class="old-price">38.990.000đ</span>
+						</div>
+						<button
+							class="btn-add-cart"
+							onclick="addToCart('iPhone 18 Pro Max')"
+						>
+							<i data-lucide="shopping-cart"></i> Thêm Giỏ Hàng
+						</button>
+					</div>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="product-card" data-category="iphone18">
+					<div class="card-img-box">
+						<span class="tag tag-hot">HOT</span>
+						<img src="assets/images/iphone18pro.jpg" alt="iPhone 18 Pro" />
+					</div>
+					<div class="card-body">
+						<div class="color-dots">
+							<span class="dot silver"></span>
+							<span class="dot black"></span>
+						</div>
+						<h3 class="product-name">iPhone 18 Pro</h3>
+						<p class="product-spec">Màn hình 6.3" 120Hz, Camera 48MP Zoom 5x</p>
+						<div class="price-box">
+							<span class="current-price">28.990.000đ</span>
+							<span class="old-price">30.990.000đ</span>
+						</div>
+						<button class="btn-add-cart" onclick="addToCart('iPhone 18 Pro')">
+							<i data-lucide="shopping-cart"></i> Thêm Giỏ Hàng
+						</button>
+					</div>
+				</div>
+
+				<!-- Card 3: iPhone 18 -->
+				<div class="product-card" data-category="iphone18">
+					<div class="card-img-box">
+						<img src="assets/images/iphone18pro.webp" alt="iPhone 18" />
+					</div>
+					<div class="card-body">
+						<div class="color-dots">
+							<span class="dot pink"></span>
+							<span class="dot teal"></span>
+							<span class="dot blue"></span>
+						</div>
+						<h3 class="product-name">iPhone 18 Standard</h3>
+						<p class="product-spec">Nút Điều Khiển Camera Mới, Chip A18</p>
+						<div class="price-box">
+							<span class="current-price">22.490.000đ</span>
+							<span class="old-price">23.990.000đ</span>
+						</div>
+						<button class="btn-add-cart" onclick="addToCart('iPhone 18')">
+							<i data-lucide="shopping-cart"></i> Thêm Giỏ Hàng
+						</button>
+					</div>
+				</div>
+
+				<!-- Card 4: iPhone 17 Pro Max -->
+				<div class="product-card" data-category="iphone17">
+					<div class="card-img-box">
+						<span class="tag tag-best">BÁN CHẠY</span>
+						<img
+							src="assets/images/apple-iphone-17-pro-2.jpg"
+							alt="iPhone 17 Pro Max"
+						/>
+					</div>
+					<div class="card-body">
+						<div class="color-dots">
+							<span class="dot gold"></span>
+							<span class="dot silver"></span>
+						</div>
+						<h3 class="product-name">iPhone 17 Pro Max</h3>
+						<p class="product-spec">Titan Tự Nhiên, Chip A19 Pro, USB-C</p>
+						<div class="price-box">
+							<span class="current-price">29.490.000đ</span>
+							<span class="old-price">34.990.000đ</span>
+						</div>
+						<button
+							class="btn-add-cart"
+							onclick="addToCart('iPhone 17 Pro Max')"
+						>
+							<i data-lucide="shopping-cart"></i> Thêm Giỏ Hàng
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END Section 3 : Danh sach san pham -->
+
+		<!--Section 4: BANNER KHUYẾN MÃI-->
+		<section id="promotions" class="container promo-section">
+			<div class="promo-box">
+				<div class="promo-content">
+					<span class="promo-sub">Đặc Quyền Hội Viên iHub</span>
+					<h2 class="promo-title">Thu Cũ Đổi Mới - Trợ Giá Đến 2.500.000đ</h2>
+					<p class="promo-desc">
+						Đổi máy cũ lấy iPhone mới thủ tục cực nhanh trong 15 phút. Hỗ trợ
+						trả góp 0% lãi suất.
+					</p>
+					<button
+						class="btn btn-primary"
+						onclick="alert('Tính năng đang phát triển!')"
+					>
+						Định Giá Máy Cũ Ngay
+					</button>
+				</div>
+				<i data-lucide="smartphone" class="promo-bg-icon"></i>
+			</div>
+		</section>
+		<!-- END Section 4: BANNER KHUYẾN MÃI-->
+
+		<!--FOOTER-->
+		<footer id="footer" class="footer">
+			<div class="container footer-grid">
+				<!-- Cột 1: Thông tin thương hiệu -->
+				<div class="footer-col">
+					<div class="logo">
+						<div class="logo-icon"><i data-lucide="smartphone"></i></div>
+						<span class="brand-name">iHub Store</span>
+					</div>
+					<p class="footer-desc">
+						Hệ thống bán lẻ iPhone chính hãng VN/A uy tín. Cam kết chất lượng,
+						bảo hành 1 đổi 1 chuẩn Apple.
+					</p>
+				</div>
+
+				<!-- Cột 2: Đường dẫn sản phẩm -->
+				<div class="footer-col">
+					<h4 class="footer-heading">Sản Phẩm</h4>
+					<ul class="footer-links">
+						<li><a href="#">iPhone 18 Pro Max</a></li>
+						<li><a href="#">iPhone 18 Pro</a></li>
+						<li><a href="#">iPhone 18 Plus / 18</a></li>
+						<li><a href="#">iPhone 17 Series</a></li>
+					</ul>
+				</div>
+
+				<!-- Cột 3: Chính sách -->
+				<div class="footer-col">
+					<h4 class="footer-heading">Chính Sách</h4>
+					<ul class="footer-links">
+						<li><a href="#">Chính sách bảo hành</a></li>
+						<li><a href="#">Chính sách đổi trả</a></li>
+						<li><a href="#">Giao hàng & Thanh toán</a></li>
+						<li><a href="#">Trả góp 0%</a></li>
+					</ul>
+				</div>
+
+				<!-- Cột 4: Liên hệ -->
+				<div class="footer-col">
+					<h4 class="footer-heading">Tổng Đài Hỗ Trợ</h4>
+					<p class="contact-item">Gọi mua hàng: <strong>1800.6868</strong></p>
+					<p class="contact-item">Bảo hành: <strong>1800.6869</strong></p>
+					<div class="social-icons">
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a
+							class="ytb"
+							href="https://www.youtube.com/?app=desktop&hl=vi"
+							target="_blank"
+							><i class="fa-brands fa-youtube"></i
+						></a>
+						<a class="insta" href="https://www.instagram.com/" target="_blank"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom border-top">
+				<p>
+					© 2026 iHub Retailer. Tất cả quyền được bảo lưu. Bài tập lớn thiết kế
+					Website.
+				</p>
+			</div>
+		</footer>
+		<!--END FOOTER-->
+
+		<!-- Box Contact -->
+		<div class="box-contact">
+			<ul>
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/" target="_blank">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/?app=desktop&hl=vi" target="_blank">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- End Box Contact -->
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>

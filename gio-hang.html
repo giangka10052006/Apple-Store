@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Giỏ Hàng - iHub Apple Store</title>
+
+		<!-- Font chữ SF Pro / Montserrat -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+		/>
+		<!-- Lucide Icons -->
+		<script src="https://unpkg.com/lucide@latest"></script>
+
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<!-- Top Header -->
+		<div class="top-header">
+			<div class="container">
+				<div class="inner-wrap">
+					<div class="inner-item">
+						<i class="fa-solid fa-phone"></i> 0123.456.789
+					</div>
+					<div class="inner-item">
+						<i class="fa-solid fa-envelope"></i> contact@28travel.com
+					</div>
+					<div class="inner-item">
+						<i class="fa-solid fa-building"></i> Số 123, đường ABC, thành phố
+						XYZ
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Top Header -->
+
+		<!-- HEADER -->
+		<header class="header">
+			<div class="container header-container">
+				<!-- Logo thương hiệu -->
+				<a href="#" class="logo">
+					<div class="logo-icon">
+						<i data-lucide="smartphone"></i>
+					</div>
+					<div class="logo-text">
+						<span class="brand-name">iHub</span>
+						<span class="brand-sub">Apple Authorised</span>
+					</div>
+				</a>
+
+				<!-- Menu liên kết chính -->
+				<nav class="nav-menu">
+					<ul>
+						<li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+						<li><a href="#products" class="nav-link">iPhone 18 Series</a></li>
+						<li><a href="#products" class="nav-link">Tất cả sản phẩm</a></li>
+						<li><a href="#promotions" class="nav-link">Ưu đãi</a></li>
+						<li><a href="#footer" class="nav-link">Liên hệ</a></li>
+					</ul>
+				</nav>
+
+				<!-- Thanh tìm kiếm & Giỏ hàng -->
+				<div class="header-actions">
+					<div class="search-box">
+						<i data-lucide="search" class="search-icon"></i>
+						<input type="text" placeholder="Tìm iPhone..." />
+					</div>
+
+					<a
+						href="gio-hang.html"
+						class="cart-btn"
+						id="cartBtn"
+						title="Giỏ hàng"
+						style="
+							text-decoration: none;
+							display: inline-flex;
+							align-items: center;
+						"
+					>
+						<i data-lucide="shopping-bag"></i>
+						<span class="cart-badge" id="cartCount">2</span>
+					</a>
+				</div>
+			</div>
+		</header>
+		<!--END HEADER -->
+
+		<!-- MAIN CART CONTENT-->
+		<main class="cart-page container">
+			<!-- Tiêu đề trang & Quay lại -->
+			<div class="cart-header">
+				<a href="trang-chu.html" class="back-link">
+					<i data-lucide="arrow-left"></i> Tiếp tục mua sắm
+				</a>
+				<h1 class="page-title">
+					Giỏ Hàng Của Bạn (<span id="cartTotalItems">2</span> sản phẩm)
+				</h1>
+			</div>
+
+			<div class="cart-layout">
+				<!-- CỘT TRÁI: DANH SÁCH SẢN PHẨM & THÔNG TIN GIAO HÀNG -->
+				<div class="cart-main-content">
+					<!-- Bảng danh sách sản phẩm -->
+					<div class="cart-card">
+						<div class="card-header-flex">
+							<h2 class="card-title-custom">
+								<i data-lucide="shopping-cart"></i> Sản phẩm đã chọn
+							</h2>
+
+							<button class="clear-all-btn" onclick="clearAllCart()">
+								<i data-lucide="trash-2"></i> Xóa tất cả
+							</button>
+						</div>
+
+						<div class="cart-items-list" id="cartItemsContainer">
+							<!-- Sản phẩm 1 -->
+							<div class="cart-item" data-price="34990000" id="item-1">
+								<div class="item-img">
+									<img
+										src="assets/images/iphone18pro.jpg"
+										alt="iPhone 18 Pro Max"
+									/>
+								</div>
+								<div class="item-info">
+									<h3 class="item-name">iPhone 18 Pro Max</h3>
+									<p class="item-meta">Dung lượng: 256GB | Màu: Titan Sa Mạc</p>
+									<span class="item-price">34.990.000đ</span>
+								</div>
+								<div class="item-qty">
+									<button class="qty-btn" onclick="updateQty(1, -1)">-</button>
+									<span class="qty-val" id="qty-1">1</span>
+									<button class="qty-btn" onclick="updateQty(1, 1)">+</button>
+								</div>
+								<div class="item-total" id="total-1">34.990.000đ</div>
+								<button class="remove-btn" onclick="removeItem(1)" title="Xóa">
+									<i data-lucide="trash-2"></i>
+								</button>
+							</div>
+
+							<!-- Sản phẩm 2 -->
+							<div class="cart-item" data-price="28990000" id="item-2">
+								<div class="item-img">
+									<img
+										src="assets/images/apple-iphone-17-pro-2.jpg"
+										alt="iPhone 17 Pro"
+									/>
+								</div>
+								<div class="item-info">
+									<h3 class="item-name">iPhone 17 Pro</h3>
+									<p class="item-meta">
+										Dung lượng: 128GB | Màu: Titan Tự Nhiên
+									</p>
+									<span class="item-price">28.990.000đ</span>
+								</div>
+								<div class="item-qty">
+									<button class="qty-btn" onclick="updateQty(2, -1)">-</button>
+									<span class="qty-val" id="qty-2">1</span>
+									<button class="qty-btn" onclick="updateQty(2, 1)">+</button>
+								</div>
+								<div class="item-total" id="total-2">28.990.000đ</div>
+								<button class="remove-btn" onclick="removeItem(2)" title="Xóa">
+									<i data-lucide="trash-2"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Form thông tin giao hàng -->
+					<div class="cart-card">
+						<h2 class="card-title">
+							<i data-lucide="map-pin"></i> Thông tin nhận hàng
+						</h2>
+						<form
+							class="checkout-form"
+							id="checkoutForm"
+							onsubmit="handleCheckout(event)"
+						>
+							<div class="form-row">
+								<div class="form-group">
+									<label>Họ và tên *</label>
+									<input
+										type="text"
+										placeholder="Nhập họ và tên"
+										required
+										value="Đức Giang"
+									/>
+								</div>
+								<div class="form-group">
+									<label>Số điện thoại *</label>
+									<input
+										type="tel"
+										placeholder="Nhập số điện thoại"
+										required
+										value="0987654321"
+									/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label>Địa chỉ nhận hàng *</label>
+								<input
+									type="text"
+									placeholder="Số nhà, tên đường, phường/xã, quận/huyện..."
+									required
+									value="Đại học Công nghiệp Hà Nội, Phường Minh Khai, Bắc Từ Liêm, Hà Nội"
+								/>
+							</div>
+
+							<div class="form-group">
+								<label>Ghi chú đơn hàng (Tùy chọn)</label>
+								<textarea
+									rows="2"
+									placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi giao..."
+								></textarea>
+							</div>
+
+							<!-- Phương thức thanh toán -->
+							<div class="payment-methods">
+								<label class="form-label-title">Phương thức thanh toán</label>
+								<div class="payment-options">
+									<label class="payment-option">
+										<input type="radio" name="payment" value="cod" checked />
+										<span class="option-box">
+											<i data-lucide="banknote"></i>
+											<span>Thanh toán khi nhận hàng (COD)</span>
+										</span>
+									</label>
+									<label class="payment-option">
+										<input type="radio" name="payment" value="banking" />
+										<span class="option-box">
+											<i data-lucide="qr-code"></i>
+											<span>Chuyển khoản qua QR / Banking</span>
+										</span>
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- CỘT PHẢI: TỔNG KẾT ĐƠN HÀNG & NÚT THANH TOÁN -->
+				<div class="cart-summary-sidebar">
+					<!-- Nhập mã giảm giá -->
+					<div class="cart-card">
+						<h3 class="summary-title">
+							<i data-lucide="ticket"></i> Mã giảm giá
+						</h3>
+						<div class="coupon-box">
+							<input
+								type="text"
+								id="couponCode"
+								placeholder="Nhập mã (VD: IHUB2026)"
+								uppercase
+							/>
+							<button class="btn-apply" onclick="applyCoupon()">Áp dụng</button>
+						</div>
+						<p class="coupon-msg" id="couponMsg"></p>
+					</div>
+
+					<!-- Chi tiết hóa đơn -->
+					<div class="cart-card summary-card">
+						<h3 class="summary-title">Tóm tắt đơn hàng</h3>
+
+						<div class="summary-row">
+							<span>Tạm tính:</span>
+							<span id="subTotalText">63.980.000đ</span>
+						</div>
+
+						<div class="summary-row">
+							<span>Giảm giá:</span>
+							<span class="discount-text" id="discountText">-0đ</span>
+						</div>
+
+						<div class="summary-row">
+							<span>Phí vận chuyển:</span>
+							<span class="free-ship">Miễn phí</span>
+						</div>
+
+						<div class="summary-divider"></div>
+
+						<div class="summary-row total-row">
+							<span>Tổng tiền thanh toán:</span>
+							<span class="final-price" id="finalPriceText">63.980.000đ</span>
+						</div>
+						<p class="vat-note">(Đã bao gồm VAT 10% & hóa đơn GTGT)</p>
+
+						<!-- Nút Đặt Hàng -->
+						<button
+							class="btn btn-primary btn-checkout"
+							form="checkoutForm"
+							type="submit"
+						>
+							<i data-lucide="shield-check"></i> XÁC NHẬN ĐẶT HÀNG
+						</button>
+
+						<div class="trust-badges">
+							<div class="badge-item">
+								<i data-lucide="check-circle-2"></i> Cam kết chính hãng 100%
+							</div>
+							<div class="badge-item">
+								<i data-lucide="rotate-ccw"></i> 1 đổi 1 trong 30 ngày
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="container footer-bottom">
+				<p>
+					© 2026 iHub Retailer. Tất cả quyền được bảo lưu. Bài tập lớn thiết kế
+					Website.
+				</p>
+			</div>
+		</footer>
+
+		<!-- Box Contact -->
+		<div class="box-contact">
+			<ul>
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/" target="_blank">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/?app=desktop&hl=vi" target="_blank">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- End Box Contact -->
+		<!-- Script xử lý tính toán riêng -->
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
