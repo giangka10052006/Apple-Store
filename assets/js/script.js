@@ -1,9 +1,19 @@
 
 // 1. KHỞI TẠO BIỂU TƯỢNG (LUCIDE ICONS)
-
 document.addEventListener("DOMContentLoaded", function () {
 	// Khởi tạo tất cả icon Lucide có trên trang
-	lucide.createIcons();
+
+    lucide.createIcons();
+
+		// Logic bật/tắt Mobile Menu
+		const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+		const navMenu = document.getElementById("navMenu");
+
+		if (mobileMenuBtn && navMenu) {
+			mobileMenuBtn.addEventListener("click", () => {
+				navMenu.classList.toggle("open");
+			});
+		}
 });
 
 

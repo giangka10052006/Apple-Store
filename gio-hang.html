@@ -55,7 +55,7 @@
 				</a>
 
 				<!-- Menu liên kết chính -->
-				<nav class="nav-menu">
+				<nav class="nav-menu" id="navMenu">
 					<ul>
 						<li><a href="#hero" class="nav-link active">Trang chủ</a></li>
 						<li><a href="#products" class="nav-link">iPhone 18 Series</a></li>
@@ -72,6 +72,13 @@
 						<input type="text" placeholder="Tìm iPhone..." />
 					</div>
 
+					<!-- Nút Đăng ký / Đăng nhập -->
+					<a href="#" class="auth-btn" title="Đăng nhập / Đăng ký" onclick="alert('Tính năng đăng nhập đang phát triển!'); return false;">
+						<i data-lucide="user"></i>
+						<span class="auth-text">Đăng nhập</span>
+					</a>
+
+					<!-- Giỏ hàng -->
 					<a
 						href="gio-hang.html"
 						class="cart-btn"
@@ -86,6 +93,11 @@
 						<i data-lucide="shopping-bag"></i>
 						<span class="cart-badge" id="cartCount">2</span>
 					</a>
+
+					<!-- Nút Mobile Menu Hamburger -->
+					<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+						<i data-lucide="menu"></i>
+					</button>
 				</div>
 			</div>
 		</header>
